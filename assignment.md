@@ -51,25 +51,26 @@ The post order traversal of a binary search tree is 5 7 6 9 11 10 8. What is its
 
 #### 6) Find the next commanding officer
 
-whosInChargeNext() {
-let currentNode = this.root;
-let list = [];
-let queue = [];
-queue.push(currentNode);
+    whosInChargeNext() {
+        
+        let currentNode = this.root;
+        let list = [];
+        let queue = [];
+        queue.push(currentNode);
 
-    while (queue.length > 0) {
-      currentNode = queue.shift();
-      list.push(currentNode.value);
-      if (currentNode.left) {
-        queue.push(currentNode.left);
-      }
-      if (currentNode.right) {
-        queue.push(currentNode.right)
-      }
+        while (queue.length > 0) {
+        currentNode = queue.shift();
+        list.push(currentNode.value);
+        if (currentNode.left) {
+            queue.push(currentNode.left);
+        }
+        if (currentNode.right) {
+            queue.push(currentNode.right)
+        }
+        }
+        return list;
+
     }
-    return list;
-
-}
 
 #### 7) max profit
 
